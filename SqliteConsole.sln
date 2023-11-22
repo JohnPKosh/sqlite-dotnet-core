@@ -5,9 +5,11 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqliteConsole", "SqliteConsole\SqliteConsole.csproj", "{E9E40020-23EB-4113-9EFC-01F7CDA383BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqliteConsole.Core", "SqliteConsole.Core\SqliteConsole.Core.csproj", "{2CEE3505-40EF-4785-AA59-72D9D0042CBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqliteConsole.Core", "SqliteConsole.Core\SqliteConsole.Core.csproj", "{2CEE3505-40EF-4785-AA59-72D9D0042CBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqliteConsole.Infrastructure", "SqliteConsole.Infrastructure\SqliteConsole.Infrastructure.csproj", "{716B14C2-A633-46A1-972E-7D740B4D3829}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqliteConsole.Infrastructure", "SqliteConsole.Infrastructure\SqliteConsole.Infrastructure.csproj", "{716B14C2-A633-46A1-972E-7D740B4D3829}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Db1Console", "Db1Console\Db1Console.csproj", "{CD3BEC9E-F2F4-4AE1-835A-916B95AD9FDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{716B14C2-A633-46A1-972E-7D740B4D3829}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{716B14C2-A633-46A1-972E-7D740B4D3829}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{716B14C2-A633-46A1-972E-7D740B4D3829}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD3BEC9E-F2F4-4AE1-835A-916B95AD9FDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD3BEC9E-F2F4-4AE1-835A-916B95AD9FDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD3BEC9E-F2F4-4AE1-835A-916B95AD9FDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD3BEC9E-F2F4-4AE1-835A-916B95AD9FDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
