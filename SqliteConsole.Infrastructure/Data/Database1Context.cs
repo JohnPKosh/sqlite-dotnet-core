@@ -7,7 +7,7 @@ namespace SqliteConsole.Infrastructure.Data;
 
 public static class Database1Consts
 {
-    internal const string DEFAULT_CONNECTIONSTRING = "Data Source=Database1.db;";
+    public const string DEFAULT_CONNECTIONSTRING = "Data Source=Database1.db;";
 }
 
 public partial class Database1Context : DbContext
@@ -33,10 +33,10 @@ public partial class Database1Context : DbContext
 
     public virtual DbSet<DocRelation> DocRelations { get; set; }
 
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlite(Database1Consts.DEFAULT_CONNECTIONSTRING);
+//    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+//        => optionsBuilder.UseSqlite(Database1Consts.DEFAULT_CONNECTIONSTRING);
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -29,28 +29,28 @@ internal class Program
     static void initialize(string[] args)
     {
         // Configuration
-        var builder = new ConfigurationBuilder()
-            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+        var builder = new ConfigurationBuilder();
+            //.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
         var configuration = builder.Build();
 
         // Database
         var optionsBuilder = new DbContextOptionsBuilder<Database1Context>()
-            .UseSqlite(configuration.GetConnectionString("DefaultConnection"));
+            .UseSqlite(Database1Consts.DEFAULT_CONNECTIONSTRING);
         var context = new Database1Context(optionsBuilder.Options);
         context.Database.EnsureCreated();
 
         // Services
         services = new ServiceCollection()
-            .AddLogging(loggingBuilder =>
-            {
-                loggingBuilder.AddConsole();
-            })
-            .AddSingleton(configuration)
-            .AddSingleton(optionsBuilder.Options)
-            .AddSingleton<IDocService, DocService>()
-            //.AddDbContextPool<Database1Context>(options => options.UseSqlite(configuration.GetConnectionString("DefaultConnection")))
-            .AddDbContext<Database1Context>()
-            .BuildServiceProvider();
+        .AddLogging(loggingBuilder =>
+        {
+            loggingBuilder.AddConsole();
+        })
+        .AddSingleton(configuration)
+        .AddSingleton(optionsBuilder.Options)
+        .AddSingleton<IDocService, DocService>()
+        .AddDbContextPool<Database1Context>(options => options.UseSqlite(Database1Consts.DEFAULT_CONNECTIONSTRING))
+        //.AddDbContext<Database1Context>()
+        .BuildServiceProvider();
 
         var logger = (services.GetService<ILoggerFactory>() ?? throw new InvalidOperationException())
             .CreateLogger<Program>();
