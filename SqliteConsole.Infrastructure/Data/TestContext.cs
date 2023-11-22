@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using SqliteConsole.Infrastructure.Models;
 
-namespace SqliteConsole.Infrastructure.Models;
+namespace SqliteConsole.Infrastructure.Data;
 
 public partial class TestContext : DbContext
 {
